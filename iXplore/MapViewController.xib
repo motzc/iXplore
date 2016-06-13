@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="iXplore" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="8bO-J3-qDR" id="EOR-on-1ph"/>
+                <outlet property="tableView" destination="7ot-m7-gEy" id="gLH-9v-b5q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8bO-J3-qDR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="333" id="92N-kO-MKp"/>
+                    </constraints>
+                </mapView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-m7-gEy">
+                    <rect key="frame" x="0.0" y="333" width="375" height="334"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8bO-J3-qDR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="209-Sv-dFR"/>
+                <constraint firstItem="7ot-m7-gEy" firstAttribute="top" secondItem="8bO-J3-qDR" secondAttribute="bottom" id="4bf-Rg-IoG"/>
+                <constraint firstAttribute="trailing" secondItem="8bO-J3-qDR" secondAttribute="trailing" id="Jb0-2c-w3P"/>
+                <constraint firstItem="8bO-J3-qDR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QWo-qw-JWR"/>
+                <constraint firstItem="8bO-J3-qDR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VAZ-Dz-E0j"/>
+                <constraint firstItem="7ot-m7-gEy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X9h-jn-YLw"/>
+                <constraint firstItem="7ot-m7-gEy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XzT-0t-2M3"/>
+                <constraint firstAttribute="trailing" secondItem="7ot-m7-gEy" secondAttribute="trailing" id="gW6-16-ilF"/>
+                <constraint firstAttribute="bottom" secondItem="7ot-m7-gEy" secondAttribute="bottom" id="nmK-TO-ZLM"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="277.5" y="332.5"/>
+        </view>
+    </objects>
+</document>
