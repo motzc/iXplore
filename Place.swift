@@ -17,6 +17,7 @@ class Place:NSObject, MKAnnotation {
     var logo:String? = ""
     var info:String? = ""
     var date:NSDate = NSDate()
+    var favourite:Bool = false
     
     
     class func placeList() -> [Place] {
@@ -24,31 +25,29 @@ class Place:NSObject, MKAnnotation {
         let place = Place()
         place.title = "Workshop 17"
         place.logo = "iX.png"
-        place.date = NSDate()
+        place.favourite = true
         place.coordinate = CLLocationCoordinate2D(latitude: -33.906764,longitude: 18.4164983)
         
         let place2 = Place()
         place2.title = "Truth Coffee"
         place2.logo = "truth.png"
-        place2.date = NSDate()
+        place2.favourite = true
         place2.coordinate = CLLocationCoordinate2D(latitude: -33.9281976,longitude: 18.4227045)
         
         let place3 = Place()
         place3.title = "Chop Chop Coffee"
         place3.logo = "chopchop.jpg"
-        place2.date = NSDate()
         place3.coordinate = CLLocationCoordinate2D(latitude: -33.9271879,longitude: 18.4327055)
         
         let place4 = Place()
         place4.title = "Christ the Redeemer"
         place4.logo = "christ_the_redeemer"
-        place2.date = NSDate()
+        place4.favourite = true
         place4.coordinate = CLLocationCoordinate2D(latitude: -22.9519,longitude: -43.2105)
         
         let place5 = Place()
         place5.title = "Great Wall of China"
         place5.logo = "great_wall_of_china"
-        place2.date = NSDate()
         place5.coordinate = CLLocationCoordinate2D(latitude: 40.4319,longitude: 116.5704)
         
         let place6 = Place()

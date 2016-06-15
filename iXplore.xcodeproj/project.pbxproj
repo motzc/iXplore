@@ -17,6 +17,18 @@
 		56811C811D0F61DD00CE861B /* machu_picchu.png in Resources */ = {isa = PBXBuildFile; fileRef = 56811C7E1D0F61DD00CE861B /* machu_picchu.png */; };
 		56811C821D0F61DD00CE861B /* petra.png in Resources */ = {isa = PBXBuildFile; fileRef = 56811C7F1D0F61DD00CE861B /* petra.png */; };
 		56811C831D0F61DD00CE861B /* italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 56811C801D0F61DD00CE861B /* italy.png */; };
+		56B885DC1D1032F500C1FCC5 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B885DA1D1032F500C1FCC5 /* LandingViewController.swift */; };
+		56B885DD1D1032F500C1FCC5 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B885DB1D1032F500C1FCC5 /* LandingViewController.xib */; };
+		56B885E01D10331500C1FCC5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B885DE1D10331500C1FCC5 /* LogInViewController.swift */; };
+		56B885E11D10331500C1FCC5 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B885DF1D10331500C1FCC5 /* LogInViewController.xib */; };
+		56B885E41D10332A00C1FCC5 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B885E21D10332A00C1FCC5 /* RegistrationViewController.swift */; };
+		56B885E51D10332A00C1FCC5 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B885E31D10332A00C1FCC5 /* RegistrationViewController.xib */; };
+		56B885E71D10357B00C1FCC5 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56B885E61D10357B00C1FCC5 /* earth.jpg */; };
+		56B885E91D1042A000C1FCC5 /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B885E81D1042A000C1FCC5 /* earth.png */; };
+		56B885EB1D10469C00C1FCC5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B885EA1D10469C00C1FCC5 /* home.png */; };
+		56B885ED1D10489800C1FCC5 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B885EC1D10489800C1FCC5 /* UserController.swift */; };
+		56B886311D1169F500C1FCC5 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8862F1D1169F500C1FCC5 /* NewPlaceViewController.swift */; };
+		56B886321D1169F500C1FCC5 /* NewPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B886301D1169F500C1FCC5 /* NewPlaceViewController.xib */; };
 		56B8C2FD1D08AE82003FF641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8C2FC1D08AE82003FF641 /* AppDelegate.swift */; };
 		56B8C3041D08AE82003FF641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B8C3031D08AE82003FF641 /* Assets.xcassets */; };
 		56B8C3071D08AE82003FF641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B8C3051D08AE82003FF641 /* LaunchScreen.storyboard */; };
@@ -25,7 +37,6 @@
 		56B8C3131D08AF90003FF641 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B8C3111D08AF90003FF641 /* MapViewController.xib */; };
 		56B8C3181D08B672003FF641 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8C3171D08B672003FF641 /* Place.swift */; };
 		56B8C31B1D08CC78003FF641 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8C3191D08CC78003FF641 /* TableViewCellController.swift */; };
-		56B8C31C1D08CC78003FF641 /* TableViewCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B8C31A1D08CC78003FF641 /* TableViewCellController.xib */; };
 		56D7FFAB1D08D6E400712497 /* star_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D7FFA91D08D6E400712497 /* star_black.png */; };
 		56D7FFAC1D08D6E400712497 /* star_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D7FFAA1D08D6E400712497 /* star_pink.png */; };
 /* End PBXBuildFile section */
@@ -41,6 +52,18 @@
 		56811C7E1D0F61DD00CE861B /* machu_picchu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = machu_picchu.png; path = ../../../../Downloads/machu_picchu.png; sourceTree = "<group>"; };
 		56811C7F1D0F61DD00CE861B /* petra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = petra.png; path = ../../../../Downloads/petra.png; sourceTree = "<group>"; };
 		56811C801D0F61DD00CE861B /* italy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = italy.png; path = ../../../../Downloads/italy.png; sourceTree = "<group>"; };
+		56B885DA1D1032F500C1FCC5 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		56B885DB1D1032F500C1FCC5 /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		56B885DE1D10331500C1FCC5 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		56B885DF1D10331500C1FCC5 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		56B885E21D10332A00C1FCC5 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		56B885E31D10332A00C1FCC5 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		56B885E61D10357B00C1FCC5 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../../../Downloads/earth.jpg; sourceTree = "<group>"; };
+		56B885E81D1042A000C1FCC5 /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = earth.png; path = ../../../../Downloads/earth.png; sourceTree = "<group>"; };
+		56B885EA1D10469C00C1FCC5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Downloads/home.png; sourceTree = "<group>"; };
+		56B885EC1D10489800C1FCC5 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		56B8862F1D1169F500C1FCC5 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		56B886301D1169F500C1FCC5 /* NewPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPlaceViewController.xib; sourceTree = "<group>"; };
 		56B8C2F91D08AE82003FF641 /* iXplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iXplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B8C2FC1D08AE82003FF641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B8C3031D08AE82003FF641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +74,6 @@
 		56B8C3111D08AF90003FF641 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		56B8C3171D08B672003FF641 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Place.swift; sourceTree = "<group>"; };
 		56B8C3191D08CC78003FF641 /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
-		56B8C31A1D08CC78003FF641 /* TableViewCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellController.xib; sourceTree = "<group>"; };
 		56D7FFA91D08D6E400712497 /* star_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_black.png; path = "../../../../Downloads/documents-export-2016-06-08/star_black.png"; sourceTree = "<group>"; };
 		56D7FFAA1D08D6E400712497 /* star_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_pink.png; path = "../../../../Downloads/documents-export-2016-06-08/star_pink.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B885D91D1032D700C1FCC5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				56B885DA1D1032F500C1FCC5 /* LandingViewController.swift */,
+				56B885DB1D1032F500C1FCC5 /* LandingViewController.xib */,
+				56B885DE1D10331500C1FCC5 /* LogInViewController.swift */,
+				56B885DF1D10331500C1FCC5 /* LogInViewController.xib */,
+				56B885E21D10332A00C1FCC5 /* RegistrationViewController.swift */,
+				56B885E31D10332A00C1FCC5 /* RegistrationViewController.xib */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		56B8862E1D1169C100C1FCC5 /* New Place */ = {
+			isa = PBXGroup;
+			children = (
+				56B8862F1D1169F500C1FCC5 /* NewPlaceViewController.swift */,
+				56B886301D1169F500C1FCC5 /* NewPlaceViewController.xib */,
+			);
+			name = "New Place";
+			sourceTree = "<group>";
+		};
 		56B8C2F01D08AE82003FF641 = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +132,17 @@
 		56B8C2FB1D08AE82003FF641 /* iXplore */ = {
 			isa = PBXGroup;
 			children = (
+				56B8862E1D1169C100C1FCC5 /* New Place */,
+				56B885D91D1032D700C1FCC5 /* Authentication */,
 				56D7FFA81D08D4C900712497 /* Images */,
 				56B8C3171D08B672003FF641 /* Place.swift */,
 				56B8C3191D08CC78003FF641 /* TableViewCellController.swift */,
-				56B8C31A1D08CC78003FF641 /* TableViewCellController.xib */,
 				56B8C3141D08AF9B003FF641 /* Map */,
 				56B8C2FC1D08AE82003FF641 /* AppDelegate.swift */,
 				56B8C3031D08AE82003FF641 /* Assets.xcassets */,
 				56B8C3051D08AE82003FF641 /* LaunchScreen.storyboard */,
 				56B8C3081D08AE82003FF641 /* Info.plist */,
+				56B885EC1D10489800C1FCC5 /* UserController.swift */,
 			);
 			path = iXplore;
 			sourceTree = "<group>";
@@ -113,8 +159,11 @@
 		56D7FFA81D08D4C900712497 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				56B885E61D10357B00C1FCC5 /* earth.jpg */,
 				56811C701D0EF4E200CE861B /* iX.png */,
+				56B885EA1D10469C00C1FCC5 /* home.png */,
 				56811C7E1D0F61DD00CE861B /* machu_picchu.png */,
+				56B885E81D1042A000C1FCC5 /* earth.png */,
 				56811C7F1D0F61DD00CE861B /* petra.png */,
 				56811C801D0F61DD00CE861B /* italy.png */,
 				56811C721D0EF4E800CE861B /* truth.png */,
@@ -192,22 +241,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B885E11D10331500C1FCC5 /* LogInViewController.xib in Resources */,
 				56811C711D0EF4E200CE861B /* iX.png in Resources */,
+				56B885EB1D10469C00C1FCC5 /* home.png in Resources */,
 				56B8C3071D08AE82003FF641 /* LaunchScreen.storyboard in Resources */,
+				56B885E51D10332A00C1FCC5 /* RegistrationViewController.xib in Resources */,
+				56B885E71D10357B00C1FCC5 /* earth.jpg in Resources */,
 				56D7FFAC1D08D6E400712497 /* star_pink.png in Resources */,
 				56811C7B1D0F5FA100CE861B /* chichen_itza.jpg in Resources */,
 				56811C731D0EF4E800CE861B /* truth.png in Resources */,
 				56811C821D0F61DD00CE861B /* petra.png in Resources */,
+				56B885DD1D1032F500C1FCC5 /* LandingViewController.xib in Resources */,
 				56811C7D1D0F5FA100CE861B /* taj_mahal.png in Resources */,
 				56B8C3131D08AF90003FF641 /* MapViewController.xib in Resources */,
 				56811C751D0EF4ED00CE861B /* chopchop.jpg in Resources */,
 				56D7FFAB1D08D6E400712497 /* star_black.png in Resources */,
 				56B8C3041D08AE82003FF641 /* Assets.xcassets in Resources */,
 				56811C811D0F61DD00CE861B /* machu_picchu.png in Resources */,
-				56B8C31C1D08CC78003FF641 /* TableViewCellController.xib in Resources */,
+				56B885E91D1042A000C1FCC5 /* earth.png in Resources */,
 				56811C7C1D0F5FA100CE861B /* great_wall_of_china.png in Resources */,
 				56811C771D0F5F4700CE861B /* christ_the_redeemer.png in Resources */,
 				56811C831D0F61DD00CE861B /* italy.png in Resources */,
+				56B886321D1169F500C1FCC5 /* NewPlaceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +275,12 @@
 			files = (
 				56B8C3181D08B672003FF641 /* Place.swift in Sources */,
 				56B8C2FD1D08AE82003FF641 /* AppDelegate.swift in Sources */,
+				56B885ED1D10489800C1FCC5 /* UserController.swift in Sources */,
+				56B885E01D10331500C1FCC5 /* LogInViewController.swift in Sources */,
 				56B8C3121D08AF90003FF641 /* MapViewController.swift in Sources */,
+				56B885E41D10332A00C1FCC5 /* RegistrationViewController.swift in Sources */,
+				56B885DC1D1032F500C1FCC5 /* LandingViewController.swift in Sources */,
+				56B886311D1169F500C1FCC5 /* NewPlaceViewController.swift in Sources */,
 				56B8C31B1D08CC78003FF641 /* TableViewCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

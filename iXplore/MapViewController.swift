@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +20,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         self.placeList = Place.placeList()
+        self.mapView.delegate = self
         setupTableView()
         setupMapView()
 
@@ -28,17 +29,15 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func setupTableView() {
         
-        self.tableView.registerNib(UINib(nibName: "TableViewCellController", bundle: nil), forCellReuseIdentifier: "tableViewCellController" )
-        
+        self.tableView.registerClass(TableViewCellController.self, forCellReuseIdentifier: "tableViewCellController")
         self.tableView.delegate = self
         self.tableView.dataSource = self
-//        self.mapView.addAnnotations(placeList as! [MKAnnotation])
     }
     
     func setupMapView(){
         self.mapView.mapType = .Hybrid
         self.mapView.showsBuildings = true
-//        self.mapView.addAnnotations(placeList)
+        self.mapView.addAnnotations(placeList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +45,37 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+
+        let pin = annotation as! Place
+        let reuseId = "pin"
+
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.animatesDrop = true
+    
+                if !(pin.favourite) {
+                    pinView!.pinTintColor = UIColor.redColor()
+                } else {
+                    pinView!.pinTintColor = UIColor.cyanColor()
+                }
+    
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.placeList.count
     }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dateFormatter = NSDateFormatter()
@@ -57,26 +84,52 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let place = placeList[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("tableViewCellController", forIndexPath: indexPath) as! TableViewCellController
         cell.cellImage.image = UIImage(named: place.logo!)
+
         cell.setNeedsLayout()
-        cell.cellLabel!.text = place.title!
+        cell.cellLabel.text = place.title!
         
         
         dateFormatter.dateFormat = "MM/dd/yyyy HH:mm"
         dateFormatter.stringFromDate(currentDate)
         
-        cell.dateLabel!.text = dateFormatter.stringFromDate(currentDate)
+        cell.dateLabel.text = dateFormatter.stringFromDate(currentDate)
         print(place.title)
         return cell
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            placeList.removeAtIndex(indexPath.row)
+//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            placeList.removeAtIndex(indexPath.row)
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//        } else if editingStyle == .Insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//        }
+//    }
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
+            self.placeList.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+            print("delete button tapped")
         }
+        delete.backgroundColor = UIColor.redColor()
+        
+        let favourite = UITableViewRowAction(style: .Normal, title: "Favorite") { action, index in
+            self.placeList[indexPath.row].favourite = true
+            self.mapView.addAnnotation(self.placeList[indexPath.row])
+
+            print("favourite button tapped")
+        }
+        favourite.backgroundColor = UIColor.orangeColor()
+        
+        
+        return [delete, favourite]
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
+    }
+    
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
